@@ -1,4 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+
 import { NavigationContainer } from "@react-navigation/native";
 
 import Welcome from "../screens/Welcome";
@@ -10,17 +12,27 @@ const Tab = createBottomTabNavigator();
 function MyTabs(){
     return(
         <Tab.Navigator>
-            <Tab.Screen name="Welcome" component={Welcome} />
             <Tab.Screen name="Galeria" component={Galeria} />
             <Tab.Screen name="Formulario" component={Formulario} />
         </Tab.Navigator>
     )
 }
 
+
+const Stack = createStackNavigator()
+function MyStack(){
+    return(
+        <Stack.Navigator>
+            <Stack.Screen name="Welcome" component={Welcome} />
+            <Stack.Screen name="Tab" component={MyTabs}/>
+        </Stack.Navigator>
+    )
+}
+
 export default function MainNavigator(){
     return(
         <NavigationContainer>
-            <MyTabs/>
+            <MyStack/>
         </NavigationContainer>
     )
 }

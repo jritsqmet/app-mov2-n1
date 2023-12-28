@@ -48,6 +48,8 @@ export default function Formulario() {
             <Text>{respuesta}</Text>
             <Button title='SUMAR' onPress={suma}/>
 
+            <View style={{borderWidth:1, backgroundColor:'black', width:'90%', marginTop:10}}></View>
+
 
         </View>
     )

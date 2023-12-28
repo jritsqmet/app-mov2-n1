@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
+import Busqueda from '../components/Busqueda'
 
 export default function Formulario() {
 
@@ -49,6 +50,8 @@ export default function Formulario() {
             <Button title='SUMAR' onPress={suma}/>
 
             <View style={{borderWidth:1, backgroundColor:'black', width:'90%', marginTop:10}}></View>
+            <Text>BÚSQUEDA</Text>
+            <Busqueda datos ={ respuesta } />
 
 
         </View>

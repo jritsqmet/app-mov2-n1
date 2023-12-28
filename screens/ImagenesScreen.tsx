@@ -8,18 +8,17 @@ export default function ImagenesScreen() {
     const [visible, setvisible] = useState(false)
 
     return (
-        <View style={styles.container}>
+        <View >
             <Text>ImagenesScreen</Text>
             <TextInput
                 placeholder='Ingresar descripción'
                 onChangeText={(texto) => (setdescripcion(texto))}
-                style={styles.input}
+               
             />
             <TextInput
                 placeholder='Ingresar URL'
                 onChangeText={(texto) => (seturl(texto))}
-                style={styles.input}
-
+               
             />
 
             <TouchableOpacity onPress={() => setvisible(true)}>
